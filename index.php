@@ -70,7 +70,7 @@
                         <h4>2023-03-29</h4>
                     </div>
                     <div class="content-container">
-                        <p>General Kenobi recognized me the years ago. He said "Hello, there!" and it made my day. I haven't seen him in a while since that whole Order 66 fiasco, but I hope he's okay.</p>
+                        <p>General Kenobi recognized a few weeks ago. He said "Hello, there!" and it made my day. I haven't seen him in a while since that whole Order 66 fiasco, but I hope he's okay.</p>
 
                         <p>The empire called the jedi folks traitors, but I think they're alright. Though, I do keep my mouth shut, don't want be force chocked and all, you know?</p>
                     </div>
@@ -100,7 +100,7 @@
                         <h4>2023-03-22</h4>
                     </div>
                     <div class="content-container">
-                        <p>I often wonder why we call peanut butter, well "peanut butter." There's like no butter in it!! The branding is a lie!! It's just peanut!!</p>
+                        <p>I often wonder why we call peanut butter, well "peanut butter." There's like no butter in it!! The branding is a lie!! It's just peanuts!!</p>
                     </div>
                 </article>
             </section>
