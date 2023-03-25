@@ -68,8 +68,8 @@
             <h1 class="page-header">Login Page</h1>
 
             <!-- Form -->
-            <div class="form-container" action="" method="get">
-                <form>
+            <div class="form-container">
+                <form action="" method="get">
                     <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" name="username">            
