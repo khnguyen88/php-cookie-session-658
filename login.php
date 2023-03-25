@@ -69,7 +69,7 @@
 
             <!-- Form -->
             <div class="form-container">
-                <form action="" method="get">
+                <form action="#" method="get">
                     <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" name="username">            
@@ -89,10 +89,10 @@
                                 echo '<p class="good-message">You have successfully logged in!</p>';
                             }
                             if (($username != $_GET['username'] || $password != $_GET['password']) && ($_GET['username'] != "" && $_GET['password'] != "")){
-                                echo '<p class="good-message">You have entered the wrong username and/or password!</p>';
+                                echo '<p class="bad-message">You have entered the wrong username and/or password!</p>';
                             }
                             if ($_GET['username'] == "" || $_GET['password'] == ""){
-                                echo '<p class="good-message">Either username and/or password is missing! Please fillout both inputs!</p>';
+                                echo '<p class="bad-message">Either username and/or password is missing! Please fillout both inputs!</p>';
                             }
                         }
                 ?>
