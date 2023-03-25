@@ -54,7 +54,7 @@
 
         <!-- Main Content -->
         <div class="main-container">
-        <h1 class="page-header">Home Page</h1>
+            <h1 class="page-header">Home Page</h1>
             <!-- Blog Content -->
             <section class="blog-container">
                 <!-- Blog Title -->
