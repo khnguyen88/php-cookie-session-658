@@ -71,7 +71,7 @@
             <!-- Blog Content -->
             <section class="blog-container">
                 <!-- Blog Title -->
-                <h2>Personal Blog</h2>
+                <h2 class="page-subheader">Personal Blog</h2>
 
                 <!-- Blog Entries -->
                 <!-- Article 1 -->
