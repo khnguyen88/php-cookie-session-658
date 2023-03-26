@@ -56,14 +56,14 @@
                     <ul class="navbar-nav">
                         <!-- Home Link / PHP -->
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
+                            <a class="nav-link" aria-current="page" href="./index.php">Home</a>
                         </li>
 
                         <!-- Login/Logout Link / PHP -->
                         <li class="nav-item">
-                        <a class="nav-link active" href="./login.php">
-                            <?php echo($_SESSION["loggedIn"]=="true") ? "Logout" : "Login"?>
-                        </a>
+                            <a class="nav-link active" href="./login.php">
+                                <?php echo($_SESSION["loggedIn"]=="true") ? "Logout" : "Login"?>
+                            </a>
                         </li>
 
                         <!-- Preference Link / PHP -->
@@ -114,10 +114,10 @@
                 <?php
                         if(isset($_GET['username']) && isset($_GET['password'])){
                             if (($username != $_GET['username'] || $password != $_GET['password']) && ($_GET['username'] != "" && $_GET['password'] != "")){
-                                echo '<p class="bad-message">You have entered the wrong username and/or password!</p>';
+                                echo '<p class="bad-message">Error: You have entered the wrong username and/or password!</p>';
                             }
                             if ($_GET['username'] == "" || $_GET['password'] == ""){
-                                echo '<p class="bad-message">Either username and/or password is missing! Please fillout both inputs!</p>';
+                                echo '<p class="bad-message">Error: Either username and/or password is missing! Please fillout both inputs!</p>';
                             }
                         }
                 ?>
