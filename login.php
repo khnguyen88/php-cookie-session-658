@@ -88,7 +88,7 @@
                 <?php 
                     if($_SESSION["loggedIn"]=="false"){
 
-                            echo '<h2>You are not logged in yet, please sign in...</h2>';
+                            echo '<h2 class="page-subheader">You are not logged in yet, please sign in...</h2>';
                             echo '<form action="#" method="get">';
                                     echo '<div class="mb-3">';
                                         echo '<label for="username" class="form-label">Username</label>';
@@ -102,9 +102,9 @@
                             echo '</form>';
                     }
                     else{
-                        echo '<h2>You are already logged in, do you want to log off?</h2>';
+                        echo '<h2 class="page-subheader">You have successfully logged in, do you want to log out?</h2>';
                         echo '<form action="#" method="get">';
-                                echo '<button name="signOff" class="btn btn-primary" type="submit" value="signoff">Log Off</button';  
+                                echo '<button name="signOff" class="btn btn-primary" type="submit" value="signoff">Log Out</button';  
                         echo '</form>';
                     }
                 ?>
@@ -113,9 +113,6 @@
             <div class="message-container">
                 <?php
                         if(isset($_GET['username']) && isset($_GET['password'])){
-                            if ($username == $_GET['username'] && $password == $_GET['password']){
-                                echo '<p class="good-message">You have successfully logged in!</p>';
-                            }
                             if (($username != $_GET['username'] || $password != $_GET['password']) && ($_GET['username'] != "" && $_GET['password'] != "")){
                                 echo '<p class="bad-message">You have entered the wrong username and/or password!</p>';
                             }
