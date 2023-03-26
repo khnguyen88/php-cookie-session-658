@@ -6,15 +6,15 @@
 
     $cookie_name= "displayMode";
     
-    if(isset($_GET['displayMode'])){
-        if($_GET['displayMode'] == "light"){
+    if(isset($_POST['displayMode'])){
+        if($_POST['displayMode'] == "light"){
             // 86400 = 1 day, We set the cookies for 3 days
             setcookie($cookie_name, "light", time() + (86400  * 3), "/");
 
             // Refreshes page after setting cookie(s)
             header("Location: ./preferences.php");
         }
-        if($_GET['displayMode'] == "dark"){
+        if($_POST['displayMode'] == "dark"){
             // 86400 = 1 day, We set the cookies for 3 days
             setcookie($cookie_name, "dark", time() + (86400  * 3), "/");
 
@@ -90,7 +90,7 @@
                     echo '<h1 class="page-header">Preference Page</h1>';
                     echo '<div class="form-container">';
                         echo '<h2 class="page-subheader">What color theme would you like to apply to this site?</h2>';
-                        echo '<form action="#" method="get">';
+                        echo '<form action="#" method="post">';
                                 echo '<div class="mb-3">';
                                     echo '<label for="lightMode" class="form-label">Light Mode: </label>';
                                     echo '<br>';

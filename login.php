@@ -7,15 +7,15 @@
     $username = "CIS658";
     $password = "WebArchitectures";
 
-    if(isset($_GET['username']) && isset($_GET['password'])){
-        if ($username == $_GET['username'] && $password == $_GET['password']){
+    if(isset($_POST['username']) && isset($_POST['password'])){
+        if ($username == $_POST['username'] && $password == $_POST['password']){
             $_SESSION["loggedIn"] = "true";
         }
         else{
             $_SESSION["loggedIn"] = "false";
         }
     }
-    if(isset($_GET['signOff'])){
+    if(isset($_POST['signOff'])){
         $_SESSION["loggedIn"] = "false";
     }
 ?>
@@ -89,7 +89,7 @@
                     if($_SESSION["loggedIn"]=="false"){
 
                             echo '<h2 class="page-subheader">You are not logged in yet, please sign in...</h2>';
-                            echo '<form action="#" method="get">';
+                            echo '<form action="#" method="post">';
                                     echo '<div class="mb-3">';
                                         echo '<label for="username" class="form-label">Username</label>';
                                         echo '<input type="text" class="form-control" id="username" name="username">';
@@ -98,13 +98,13 @@
                                         echo '<label for="password" class="form-label">Password</label>';
                                         echo '<input type="password" class="form-control" id="password" name="password">';
                                     echo '</div>';
-                                    echo '<button name="submit" class="btn btn-primary" type="submit" value="">Submit!</button';  
+                                    echo '<button name="submit" class="btn btn-primary" type="submit" value="">Submit!</button>';  
                             echo '</form>';
                     }
                     else{
                         echo '<h2 class="page-subheader">You have successfully logged in, do you want to log out?</h2>';
-                        echo '<form action="#" method="get">';
-                                echo '<button name="signOff" class="btn btn-primary" type="submit" value="signoff">Log Out</button';  
+                        echo '<form action="#" method="post">';
+                                echo '<button name="signOff" class="btn btn-primary" type="submit" value="signoff">Log Out</button>';  
                         echo '</form>';
                     }
                 ?>
@@ -112,11 +112,11 @@
 
             <div class="message-container">
                 <?php
-                        if(isset($_GET['username']) && isset($_GET['password'])){
-                            if (($username != $_GET['username'] || $password != $_GET['password']) && ($_GET['username'] != "" && $_GET['password'] != "")){
+                        if(isset($_POST['username']) && isset($_POST['password'])){
+                            if (($username != $_POST['username'] || $password != $_POST['password']) && ($_POST['username'] != "" && $_POST['password'] != "")){
                                 echo '<p class="bad-message">Error: You have entered the wrong username and/or password!</p>';
                             }
-                            if ($_GET['username'] == "" || $_GET['password'] == ""){
+                            if ($_POST['username'] == "" || $_POST['password'] == ""){
                                 echo '<p class="bad-message">Error: Either username and/or password is missing! Please fillout both inputs!</p>';
                             }
                         }
