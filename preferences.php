@@ -60,14 +60,14 @@
                     <ul class="navbar-nav">
                         <!-- Home Link / PHP -->
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.php">Home</a>
+                            <a class="nav-link" aria-current="page" href="./index.php">Home</a>
                         </li>
 
                         <!-- Login/Logout Link / PHP -->
                         <li class="nav-item">
-                        <a class="nav-link" href="./login.php">
-                            <?php echo($_SESSION["loggedIn"]=="true") ? "Logout" : "Login"?>
-                        </a>
+                            <a class="nav-link" href="./login.php">
+                                <?php echo($_SESSION["loggedIn"]=="true") ? "Logout" : "Login"?>
+                            </a>
                         </li>
 
                         <!-- Preference Link / PHP -->
