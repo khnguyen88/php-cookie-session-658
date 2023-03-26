@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(!isset($_SESSION["loggedIn"])){
+        $_SESSION["loggedIn"] = "false";
+    }
 
     $cookie_name= "displayMode";
     
@@ -82,24 +85,30 @@
 
         <!-- Main Content -->
         <div class="main-container">
-            <h1 class="page-header">Preference Page</h1>
+            <?php 
+                if($_SESSION["loggedIn"]=="true"){
+                    echo '<h1 class="page-header">Preference Page</h1>';
+                    echo '<div class="form-container">';
+                        echo '<h2>What color theme would you like to apply to this site?</h2>';
+                        echo '<form action="#" method="get">';
+                                echo '<div class="mb-3">';
+                                echo '<label for="lightMode" class="form-label">Light Mode: </label>';
+                                echo '<br>';
+                                echo '<button name="displayMode" class="btn btn-primary" type="submit" value="light" id="lightMode">Light Mode!</button>';            
+                                echo '</div>';
+                                echo '<div class="mb-3">';
+                                echo '<label for="darkMode" class="form-label">Dark Mode: </label>';
+                                echo '<br>';
+                                echo '<button name="displayMode" class="btn btn-primary" type="submit" value="dark" id="darkMode">Dark Mode!</button>';   
+                        echo '</form>';
+                    echo '</div>';
+                }
+                else{
+                    echo '<h1 class="page-header">ERROR! YOU ARE NOT AUTHORIZED TO BE HERE!</h1>';
+                }
+                
+            ?>
 
-            <!-- Form -->
-            <div class="form-container">
-                <h2>What color theme would you like to apply to this site?</h2>
-                <form action="#" method="get">
-                    <div class="mb-3">
-                    <label for="lightMode" class="form-label">Light Mode: </label>
-                    <br>
-                    <button name="displayMode" class="btn btn-primary" type="submit" value="light" id="lightMode">Light Mode!</button>            
-                    </div>
-                    <div class="mb-3">
-                    <label for="darkMode" class="form-label">Dark Mode: </label>
-                    <br>
-                    <button name="displayMode" class="btn btn-primary" type="submit" value="dark" id="darkMode">Dark Mode!</button>   
-                    </div>
-                </form>
-            </div>
         </div>
 
     </body>
