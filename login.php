@@ -15,6 +15,9 @@
             $_SESSION["loggedIn"] = "false";
         }
     }
+    if(isset($_GET['signOff'])){
+        $_SESSION["loggedIn"] = "false";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,17 +85,29 @@
 
             <!-- Form -->
             <div class="form-container">
-                <form action="#" method="get">
-                    <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username">            
-                    </div>
-                    <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password">            
-                    </div>
-                    <button name="submit" class="btn btn-primary" type="submit" value="">Submit!</button> 
-                </form>
+                <?php 
+                    if($_SESSION["loggedIn"]=="false"){
+
+                            echo '<h2>You are not logged in yet, please sign in...</h2>';
+                            echo '<form action="#" method="get">';
+                                    echo '<div class="mb-3">';
+                                        echo '<label for="username" class="form-label">Username</label>';
+                                        echo '<input type="text" class="form-control" id="username" name="username">';
+                                    echo '</div>';
+                                    echo '<div class="mb-3">';
+                                        echo '<label for="password" class="form-label">Password</label>';
+                                        echo '<input type="password" class="form-control" id="password" name="password">';
+                                    echo '</div>';
+                                    echo '<button name="submit" class="btn btn-primary" type="submit" value="">Submit!</button';  
+                            echo '</form>';
+                    }
+                    else{
+                        echo '<h2>You are already logged in, do you want to log off?</h2>';
+                        echo '<form action="#" method="get">';
+                                echo '<button name="signOff" class="btn btn-primary" type="submit" value="signoff">Log Off</button';  
+                        echo '</form>';
+                    }
+                ?>
             </div>
 
             <div class="message-container">
