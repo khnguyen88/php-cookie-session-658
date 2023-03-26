@@ -92,21 +92,21 @@
                         echo '<h2>What color theme would you like to apply to this site?</h2>';
                         echo '<form action="#" method="get">';
                                 echo '<div class="mb-3">';
-                                echo '<label for="lightMode" class="form-label">Light Mode: </label>';
-                                echo '<br>';
-                                echo '<button name="displayMode" class="btn btn-primary" type="submit" value="light" id="lightMode">Light Mode!</button>';            
+                                    echo '<label for="lightMode" class="form-label">Light Mode: </label>';
+                                    echo '<br>';
+                                    echo '<button name="displayMode" class="btn btn-primary" type="submit" value="light" id="lightMode">Light Mode!</button>';            
                                 echo '</div>';
                                 echo '<div class="mb-3">';
-                                echo '<label for="darkMode" class="form-label">Dark Mode: </label>';
-                                echo '<br>';
-                                echo '<button name="displayMode" class="btn btn-primary" type="submit" value="dark" id="darkMode">Dark Mode!</button>';   
+                                    echo '<label for="darkMode" class="form-label">Dark Mode: </label>';
+                                    echo '<br>';
+                                    echo '<button name="displayMode" class="btn btn-primary" type="submit" value="dark" id="darkMode">Dark Mode!</button>';   
+                                echo '</div>';
                         echo '</form>';
                     echo '</div>';
                 }
                 else{
                     echo '<h1 class="page-header">ERROR! YOU ARE NOT AUTHORIZED TO BE HERE!</h1>';
                 }
-                
             ?>
 
         </div>
