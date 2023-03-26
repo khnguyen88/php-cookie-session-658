@@ -42,14 +42,14 @@
                     <ul class="navbar-nav">
                         <!-- Home Link / PHP -->
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
                         </li>
 
                         <!-- Login/Logout Link / PHP -->
                         <li class="nav-item">
-                        <a class="nav-link" href="./login.php">
-                            <?php echo($_SESSION["loggedIn"]=="true") ? "Logout" : "Login"?>
-                        </a>
+                            <a class="nav-link" href="./login.php">
+                                <?php echo($_SESSION["loggedIn"]=="true") ? "Logout" : "Login"?>
+                            </a>
                         </li>
 
                         <!-- Preference Link / PHP -->
@@ -98,9 +98,9 @@
                         <h4>2023-03-24</h4>
                     </div>
                     <div class="content-container">
-                    <p>Jon had the audacity to eat my lasanga that I saved for myself. It had my name on it in the fridge. How rude! When I confronted him about it, he promised me he would buy me a new tray right away.</p>
+                        <p>Jon had the audacity to eat my lasanga that I saved for myself. It had my name on it in the fridge. How rude! When I confronted him about it, he promised me he would buy me a new tray right away.</p>
 
-                    <p>Well it's been two hours, Jon!! Where's my lasanga? This cat's gotta eat. </p>
+                        <p>Well it's been two hours, Jon!! Where's my lasanga? This cat's gotta eat. </p>
                     </div>
                 </article>
 
