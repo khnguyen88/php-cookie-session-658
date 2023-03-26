@@ -89,7 +89,7 @@
                 if($_SESSION["loggedIn"]=="true"){
                     echo '<h1 class="page-header">Preference Page</h1>';
                     echo '<div class="form-container">';
-                        echo '<h2>What color theme would you like to apply to this site?</h2>';
+                        echo '<h2 class="page-subheader">What color theme would you like to apply to this site?</h2>';
                         echo '<form action="#" method="get">';
                                 echo '<div class="mb-3">';
                                     echo '<label for="lightMode" class="form-label">Light Mode: </label>';
