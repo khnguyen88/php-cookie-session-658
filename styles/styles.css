@@ -18,3 +18,7 @@
     border: 1px solid;
     border-radius: 1rem;
 }
+.bad-message{
+    font-style: italic;
+    padding-top: 1rem;
+}
